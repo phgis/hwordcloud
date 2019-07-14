@@ -1,0 +1,21 @@
+Package: hwordcloud
+Type: Package
+Title: Rendering word clouds using R + Highcharts
+Version: 0.1.0
+Authors@R: person("Zhengxing Cheng", email = "czxjnu@163.com", role = c("aut", "cre"))
+Description: Render wordcloud using R + highcharts.
+License: MIT + file LICENSE
+Date: 2019-02-15
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
+Depends: R (>= 3.0.0)
+Roxygen: list(markdown = TRUE)
+URL: https://www.czxa.top/hwordcloud
+BugReports: https://github.com/czxa/hwordcloud/issues
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+Imports: 
+    htmlwidgets
