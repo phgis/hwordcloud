@@ -1,5 +1,4 @@
 # hwordcloud<img src="/assets/hwordcloud-fit.png" align="right" />
-========================================================
 [![](https://img.shields.io/badge/build-passing-brightgreen.svg?style=plastic)](https:www.czxa.top) [![](https://img.shields.io/badge/R-hwordcloud-brightgreen.svg?style=plastic)](https://www.czxa.top) [![](https://img.shields.io/badge/github-R-orange.svg?style=plastic)](https://www.czxa.top) [![](https://img.shields.io/badge/platform-Windows_OS|Mac_OS-orange.svg?style=plastic)](https://www.czxa.top)
 
 ## Introduction
