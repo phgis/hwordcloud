@@ -1,17 +1,17 @@
 Package: hwordcloud
 Type: Package
-Title: Rendering word clouds using R + Highcharts
+Title: Rendering Word Clouds using R + `Highcharts`
 Version: 0.1.0
 Authors@R: person("Zhengxing Cheng", email = "czxjnu@163.com", role = c("aut", "cre"))
-Description: The package hworcloud has a dependency on Highcharts, a commercial JavaScript charting library. Highcharts offers both a commercial license as well as a free non-commercial license. Please review the licensing options and terms before using this software.
+Description: `hworcloud` has a dependency on `Highcharts`, a commercial JavaScript charting library. `Highcharts` offers both a commercial license as well as a free non-commercial license. Please review the licensing options and terms before using this software.
 License: MIT + file LICENSE
-Date: 2019-02-15
+Date: 2019-08-05
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
 Depends: R (>= 3.0.0)
 Roxygen: list(markdown = TRUE)
-URL: https://www.czxa.top/hwordcloud
+URL: https://github.com/czxa/hwordcloud
 BugReports: https://github.com/czxa/hwordcloud/issues
 Suggests: 
     knitr,

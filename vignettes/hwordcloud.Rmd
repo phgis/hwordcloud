@@ -1,5 +1,5 @@
 ---
-title: "Rendering word clouds using R + Highcharts"
+title: "Rendering Word Clouds using R + Highcharts"
 author: "Zhenxing Cheng"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
