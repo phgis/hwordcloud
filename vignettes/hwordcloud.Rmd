@@ -14,11 +14,20 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
+if(!require(wordcloud2)){
+  install.packages("wordcloud2", dependencies = T)
+}
+if(!require(shiny)){
+  install.packages("shiny", dependencies = T)
+}
+if(!require(magrittr)){
+  install.packages("magrittr", dependencies = T)
+}
 ```
 
 # Introduction
 
-The [htmlwidgets](https://github.com/ramnathv/htmlwidgets) package is very interesting and powerful. All the time, I want write my own html widgets, but I failed. This is my third try, finally I success! and the `hwordcloud` package come out. As I first try using `htmlwidgets`, I hope you will tolerate some of the flaws of this R package, and I will improve it in the future. Next, let's use `hwordcloud`! 
+The [htmlwidgets](https://github.com/ramnathv/htmlwidgets) package is very interesting and powerful. All the time, I want to write my own html widgets, but I failed. This is my third try, finally I success! As I first try of using `htmlwidgets`, I hope you will tolerate some of the flaws of this R package, and I will improve it in the future. Next, let's use `hwordcloud`! 
 
 First, you can install it from `github`: 
 
@@ -28,7 +37,7 @@ devtools::install_github('czxa/hwordcloud')
 devtools::install_git("https://github.com/czxa/hwordcloud.git")
 ```
 
-Also, I made a Shiny App for this package:
+Also, I made a shiny application example for this package:
 
 ```{r eval=FALSE, include=TRUE}
 dir <- system.file("examples", "hwordcloud", package = "hwordcloud")
@@ -74,8 +83,6 @@ hwordcloud(text = df$word, size = df$freq,
 ### darkblue
 
 ```{r echo=TRUE}
-df <- demoFreq %>%
-  head(50)
 hwordcloud(text = df$word, size = df$freq, 
            width = "100%", height = "300px",
            theme = "darkblue")
@@ -86,8 +93,6 @@ hwordcloud(text = df$word, size = df$freq,
 ### avocado
 
 ```{r echo=TRUE}
-df <- demoFreq %>%
-  head(50)
 hwordcloud(text = df$word, size = df$freq, 
            width = "100%", height = "300px",
            theme = "avocado")
@@ -98,8 +103,6 @@ hwordcloud(text = df$word, size = df$freq,
 ### darkunica
 
 ```{r echo=TRUE}
-df <- demoFreq %>%
-  head(50)
 hwordcloud(text = df$word, size = df$freq, 
            width = "100%", height = "300px",
            theme = "darkunica")
@@ -110,8 +113,6 @@ hwordcloud(text = df$word, size = df$freq,
 ### gray
 
 ```{r echo=TRUE}
-df <- demoFreq %>%
-  head(50)
 hwordcloud(text = df$word, size = df$freq, 
            width = "100%", height = "300px",
            theme = "gray")
@@ -120,8 +121,6 @@ hwordcloud(text = df$word, size = df$freq,
 ### gridlight
 
 ```{r echo=TRUE}
-df <- demoFreq %>%
-  head(50)
 hwordcloud(text = df$word, size = df$freq, 
            width = "100%", height = "300px",
            theme = "gridlight")
@@ -132,8 +131,6 @@ hwordcloud(text = df$word, size = df$freq,
 ### grid
 
 ```{r echo=TRUE}
-df <- demoFreq %>%
-  head(50)
 hwordcloud(text = df$word, size = df$freq, 
            width = "100%", height = "300px",
            theme = "grid")
@@ -143,8 +140,6 @@ hwordcloud(text = df$word, size = df$freq,
 ### sandsignika
 
 ```{r echo=TRUE}
-df <- demoFreq %>%
-  head(50)
 hwordcloud(text = df$word, size = df$freq, 
            width = "100%", height = "300px",
            theme = "sandsignika")
@@ -154,8 +149,6 @@ hwordcloud(text = df$word, size = df$freq,
 ### sunset
 
 ```{r echo=TRUE}
-df <- demoFreq %>%
-  head(50)
 hwordcloud(text = df$word, size = df$freq, 
            width = "100%", height = "300px",
            theme = "sunset")
@@ -184,7 +177,7 @@ hwordcloud(text = df$word, size = df$freq,
            subtitleSize = "16px")
 ```
 
-## Using `hwordcloud` in R Markdown
+## Using `hwordcloud` within RMarkdown documents
 
 Benefit from `htmlwidgets`, you can use `hwordcloud()` function in R Markdown document. For example, you can create a github document and code following codes in it, save it as a `.Rmd` documents, then `knit` it, you will find a word cloud embedded in it.
 
@@ -211,10 +204,9 @@ Here is a very simple shiny example:
 ```{r eval=FALSE}
 library(shiny)
 library(magrittr)
-library(test)
 library(wordcloud2)
 ui <- fluidPage(
-    titlePanel("Highcharter word cloud example"),
+    titlePanel("word cloud example"),
     mainPanel(
       hwordcloudOutput("shinytest", height = "500px")
     )

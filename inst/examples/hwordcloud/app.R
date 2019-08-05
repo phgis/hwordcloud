@@ -6,7 +6,9 @@
 #
 #    http://shiny.rstudio.com/
 #
-
+if(!require(colourpicker)){
+  install.packages("colourpicker", dependencies = T)
+}
 library(shiny)
 library(colourpicker)
 library(wordcloud2)

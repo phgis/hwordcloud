@@ -17,7 +17,9 @@ Suggests:
     knitr,
     rmarkdown,
     magrittr,
-    wordcloud2
+    wordcloud2,
+    shiny,
+    colourpicker
 VignetteBuilder: knitr
 Imports: 
     htmlwidgets
