@@ -184,7 +184,7 @@ hwordcloud(text = df$word, size = df$freq,
            subtitleSize = "16px")
 ```
 
-## Use `hwordcloud` in R Markdown
+## Using `hwordcloud` in R Markdown
 
 Benifit from `htmlwidgets`, you can use `hwordcloud()` function in R Markdown document. For example, you can create a github document and code following codes in it, save it as a `.Rmd` documents, then `knit` it, you will find a word cloud embedded in it.
 
@@ -204,7 +204,7 @@ hwordcloud(text = df$word, size = df$freq,
                subtitleSize = "16px")
 ```
 
-## Use `hwordcloud` in R Shiny
+## Using `hwordcloud` within Shiny applications
 
 Here is a very simple shiny example:
 
