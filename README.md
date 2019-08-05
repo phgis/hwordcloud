@@ -17,8 +17,6 @@ devtools::install_git("https://github.com/czxa/hwordcloud.git")
 
 ## vignettes
 
-[使用R和HighCharts渲染词云图](https://czxb.github.io/br/hwordcloudc.html)
-
 [Rendering word clouds using R + Highcharts](https://czxb.github.io/br/hwordcloud.html)
 
 ## Licence
@@ -27,7 +25,7 @@ hwordclud has a dependency on Highcharts, a commercial JavaScript charting libra
 
 Highcharts (http://highcharts.com) is a Highsoft product which is not free for commercial and Governmental use.
 
-## Acknowledgement
+## Acknowledgements
 
 + [jbkunst/highcharter](https://github.com/jbkunst/highcharter)
 + [Lchiffon/wordcloud2](https://github.com/Lchiffon/wordcloud2)
@@ -43,12 +41,6 @@ shiny::shinyAppDir(".")
 ```
 
 ------------
-
-<h4 align="center">
-
-Code of Conduct
-
-</h4>
 
 <h4 align="center">
 
