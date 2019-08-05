@@ -25,6 +25,10 @@ devtools::install_git("https://github.com/czxa/hwordcloud.git")
 
 [Rendering word clouds using R + Highcharts](https://czxb.github.io/br/hwordcloud.html)
 
+## Manual
+
+[hwordcloud-manual.pdf](hwordcloud-manual.pdf)
+
 ## PPT
 
 [Rendering word clouds using R + Highcharts](https://czxb.github.io/br/hwordcloudppt.html)
