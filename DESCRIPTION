@@ -15,7 +15,9 @@ URL: https://www.czxa.top/hwordcloud
 BugReports: https://github.com/czxa/hwordcloud/issues
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown,
+    magrittr,
+    wordcloud2
 VignetteBuilder: knitr
 Imports: 
     htmlwidgets
