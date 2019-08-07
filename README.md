@@ -1,6 +1,6 @@
 # hwordcloud
 <!-- badges: start -->
-[![Travis build status](https://travis-ci.org/czxa/hwordcloud.svg?branch=master)](https://travis-ci.org/czxa/hwordcloud)[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/hwordcloud?color=green)](https://cran.r-project.org/package=hwordcloud) ![](http://cranlogs.r-pkg.org/badges/grand-total/hwordcloud?color=green) ![](http://cranlogs.r-pkg.org/badges/hwordcloud?color=green) ![](http://cranlogs.r-pkg.org/badges/last-week/hwordcloud?color=green)
+[![Travis build status](https://travis-ci.org/czxa/hwordcloud.svg?branch=master)](https://travis-ci.org/czxa/hwordcloud) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/hwordcloud?color=green)](https://cran.r-project.org/package=hwordcloud) ![](http://cranlogs.r-pkg.org/badges/grand-total/hwordcloud?color=green) ![](http://cranlogs.r-pkg.org/badges/hwordcloud?color=green) ![](http://cranlogs.r-pkg.org/badges/last-week/hwordcloud?color=green) [![Codecov test coverage](https://codecov.io/gh/czxa/hwordcloud/branch/master/graph/badge.svg)](https://codecov.io/gh/czxa/hwordcloud?branch=master)
 <!-- badges: end -->
 
 ## Introduction
