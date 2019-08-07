@@ -1,10 +1,10 @@
 ---
-title: "Rendering Word Clouds using R + Highcharts"
+title: "Rendering Word Clouds"
 author: "Zhenxing Cheng"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteIndexEntry{Rendering Word Clouds}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -14,15 +14,6 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
-if(!require(wordcloud2)){
-  install.packages("wordcloud2", dependencies = T)
-}
-if(!require(shiny)){
-  install.packages("shiny", dependencies = T)
-}
-if(!require(magrittr)){
-  install.packages("magrittr", dependencies = T)
-}
 ```
 
 # Introduction
@@ -56,9 +47,7 @@ We can use [wordcloud2](https://github.com/Lchiffon/wordcloud2)'s datesets to de
 ```{r echo=TRUE}
 library(hwordcloud)
 library(wordcloud2)
-library(magrittr)
-df <- demoFreq %>%
-  head(50)
+df <- head(demoFreq, 50)
 hwordcloud(text = df$word, size = df$freq, 
            width = "100%", height = "200px")
 ```
@@ -71,8 +60,6 @@ I hate complex codes, so I built some themes in this package. Just change theme 
 ### darkgreen
 
 ```{r echo=TRUE}
-df <- demoFreq %>%
-  head(50)
 hwordcloud(text = df$word, size = df$freq, 
            width = "100%", height = "300px",
            theme = "darkgreen")
@@ -162,8 +149,6 @@ Title and subtitle are also can be customized.
 A complete example: 
 
 ```{r echo=TRUE}
-df <- demoFreq %>%
-  head(50)
 hwordcloud(text = df$word, size = df$freq, 
            width = "100%", height = "200px",
            theme = "sunset",
@@ -182,8 +167,6 @@ hwordcloud(text = df$word, size = df$freq,
 Benefit from `htmlwidgets`, you can use `hwordcloud()` function in R Markdown document. For example, you can create a github document and code following codes in it, save it as a `.Rmd` documents, then `knit` it, you will find a word cloud embedded in it.
 
 ```{r eval=FALSE}
-df <- demoFreq %>%
-      head(50)
 hwordcloud(text = df$word, size = df$freq, 
                width = "100%", height = "400px",
                theme = "sunset",
@@ -203,7 +186,6 @@ Here is a very simple shiny example:
 
 ```{r eval=FALSE}
 library(shiny)
-library(magrittr)
 library(wordcloud2)
 ui <- fluidPage(
     titlePanel("word cloud example"),
@@ -212,8 +194,7 @@ ui <- fluidPage(
     )
 )
 server <- function(input, output) {
-    df <- demoFreq %>%
-        head(50)
+    df <- head(demoFreq, 50)
     output$shinytest <- renderHwordcloud({
         hwordcloud(text = df$word, size = df$freq)
     })

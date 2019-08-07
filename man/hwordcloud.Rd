@@ -53,10 +53,10 @@ Rendering word clouds using R + Highcharts
 }
 
 \examples{
-# library(hwordcloud)
-# library(wordcloud2)
-# library(magrittr)
-# df <- head(demoFreq, 50)
-# hwordcloud(text = df$word, size = df$freq)
-
+library(hwordcloud)
+library(wordcloud2)
+df <- head(demoFreq, 50)
+if (interactive()) {
+  hwordcloud(text = df$word, size = df$freq)
+}
 }

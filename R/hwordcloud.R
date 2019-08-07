@@ -1,7 +1,7 @@
 #' @title hwordcloud: Rendering word clouds using R + Highcharts
 #'
 #' @description This function can create wordclouds by binding R and Highcharts.
-#' 
+#'
 #' @import htmlwidgets
 #'
 #' @param text character vector;
@@ -22,29 +22,30 @@
 #' @param subtitleColor subtitle color, like "#666666"
 #'
 #' @examples
-#' # library(hwordcloud)
-#' # library(wordcloud2)
-#' # library(magrittr)
-#' # df <- head(demoFreq, 50)
-#' # hwordcloud(text = df$word, size = df$freq)
-#' 
+#' library(hwordcloud)
+#' library(wordcloud2)
+#' df <- head(demoFreq, 50)
+#' if (interactive()) {
+#'   hwordcloud(text = df$word, size = df$freq)
+#' }
 #' @export
-hwordcloud <- function(text,
-                       size,
-                       width = "100%",
-                       height = NULL,
-                       theme = "sandsignika",
-                       itermName = "count",
-                       title = "",
-                       titleAlign = "center",
-                       titleSize = "20px",
-                       titleColor = "#333333",
-                       subtitle = "",
-                       subtitleAlign = 'center',
-                       subtitleSize = "",
-                       subtitleColor = "#666666") {
-
-  x = list(
+hwordcloud <- function(
+  text,
+  size,
+  width = "100%",
+  height = NULL,
+  theme = "sandsignika",
+  itermName = "count",
+  title = "",
+  titleAlign = "center",
+  titleSize = "20px",
+  titleColor = "#333333",
+  subtitle = "",
+  subtitleAlign = "center",
+  subtitleSize = "",
+  subtitleColor = "#666666"
+) {
+  x <- list(
     text = text,
     size = size,
     theme = theme,
@@ -61,11 +62,11 @@ hwordcloud <- function(text,
 
   # create widget
   htmlwidgets::createWidget(
-    name = 'hwordcloud',
+    name = "hwordcloud",
     x,
     width = width,
     height = height,
-    package = 'hwordcloud'
+    package = "hwordcloud"
   )
 }
 
@@ -86,14 +87,16 @@ hwordcloud <- function(text,
 #' @name hwordcloud-shiny
 #'
 #' @export
-hwordcloudOutput <- function(outputId, width = '100%', height = '400px'){
-  htmlwidgets::shinyWidgetOutput(outputId, 'hwordcloud', width, height, package = 'hwordcloud')
+hwordcloudOutput <- function(outputId, width = "100%", height = "400px") {
+  htmlwidgets::shinyWidgetOutput(outputId, "hwordcloud", width, height, package = "hwordcloud")
 }
 
 #' @rdname hwordcloud-shiny
 #' @export
 renderHwordcloud <- function(expr, env = parent.frame(), quoted = FALSE) {
-  if (!quoted) { expr <- substitute(expr) } # force quoted
+  if (!quoted) {
+    expr <- substitute(expr)
+  } # force quoted
   htmlwidgets::shinyRenderWidget(expr, hwordcloudOutput, env, quoted = TRUE)
 }
 

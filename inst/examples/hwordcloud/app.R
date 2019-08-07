@@ -6,9 +6,6 @@
 #
 #    http://shiny.rstudio.com/
 #
-if(!require(colourpicker)){
-  install.packages("colourpicker", dependencies = T)
-}
 library(shiny)
 library(colourpicker)
 library(wordcloud2)
@@ -17,7 +14,7 @@ library(wordcloud2)
 ui <- fluidPage(
 
     # Application title
-    titlePanel("Highcharter word cloud!"),
+    titlePanel("Word Cloud Example"),
 
     # Sidebar with a slider input for number of bins
     sidebarLayout(
@@ -115,12 +112,9 @@ ui <- fluidPage(
 
 # Define server logic required to draw a histogram
 server <- function(input, output) {
-    library(hwordcloud)
-    library(wordcloud2)
-    df <- demoFreq %>%
-        head(50)
-    output$shinyhwordcloud <- hwordcloud::renderHwordcloud({
-        hwordcloud::hwordcloud(text = df$word, size = df$freq,
+    df <- head(demoFreq, 50)
+    output$shinyhwordcloud <- renderHwordcloud({
+        hwordcloud(text = df$word, size = df$freq,
              theme = input$theme,
              itermName = input$iterm,
              width = input$width,
@@ -133,7 +127,7 @@ server <- function(input, output) {
              subtitleAlign = input$subtitleAlign,
              subtitleSize = input$subtitleSize,
              subtitleColor = input$subtitleColor
-             )
+        )
     })
 }
 
