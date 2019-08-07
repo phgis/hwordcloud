@@ -6,3 +6,4 @@
 ^\.Rproj\.user$
 ^codecov\.yml$
 ^appveyor\.yml$
+^cran-comments\.md$
