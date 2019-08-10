@@ -28,6 +28,12 @@ devtools::install_github('czxa/hwordcloud')
 devtools::install_git("https://github.com/czxa/hwordcloud.git")
 ```
 
+Since I have submited this package to CRAN, you can install it via:
+
+```r 
+install.packages("hwordcloud")
+```
+
 Also, I made a shiny application example for this package:
 
 ```{r eval=FALSE, include=TRUE}
