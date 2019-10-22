@@ -60,7 +60,7 @@ hwordcloud(text = df$word, size = df$freq,
 
 ## Theme Parameter
 
-I hate complex codes, so I built some themes in this package. Just change theme parameter, you can render wordcloud in different apperance.
+I hate complex codes, so I built some themes in this package. Just change theme parameter, you can render wordclouds in different apperances.
 
 
 ### darkgreen

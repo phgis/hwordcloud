@@ -9,6 +9,7 @@
 library(shiny)
 library(colourpicker)
 library(wordcloud2)
+library(hwordcloud)
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
