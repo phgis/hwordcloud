@@ -3,7 +3,7 @@ Type: Package
 Title: Rendering Word Clouds
 Version: 0.1.0
 Authors@R: person(given = "Zhenxing", family = "Cheng", email = "czxjnu@163.com", role = c("aut", "cre"))
-Description: Provides a way to display word clouds in R. The word cloud is a html widget, so you can use it in interactive documents and 'shiny' applications.
+Description: Provides a way to display word clouds in R. As the word cloud is a HTML widget, so you can use it within interactive documents and 'shiny' applications.
 License: MIT + file LICENSE
 Date: 2019-08-05
 Encoding: UTF-8
